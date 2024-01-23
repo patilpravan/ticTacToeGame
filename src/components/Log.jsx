@@ -1,0 +1,15 @@
+export default function Log({ turns }) {
+  return (
+    <>
+      <ol id="log">
+        {turns.map((turn) => {
+          return (
+            <li key={`${turn.row}${turn.col}`}>
+              {turn.player} Selected {turn.square.row},{turn.square.col}
+            </li>
+          );
+        })}
+      </ol>
+    </>
+  );
+}
